@@ -1,7 +1,7 @@
 <template>
   <!-- Set a larger height for the div containing the chart -->
   <div class="chart-container">
-    <highcharts :options="chartOptions" class="hc"></highcharts>
+    <highcharts :options="chartOptions" :modules="['exporting']"></highcharts>
   </div>
   <!-- Add the warning message below the chart -->
   <div class="investment-warning">
@@ -12,7 +12,6 @@
   </div>
 </template>
 
-<!-- src/components/TickerChart.vue -->
 <script lang="ts" setup>
 import { onMounted, ref, watch } from 'vue'
 import axios from 'axios'
@@ -108,7 +107,6 @@ const loadTickerData = async (ticker: string, year: number, amount: number) => {
 
     // Prepare data series for the chart
     const priceData = seriesData.map((item: any) => [item.Date, item.price])
-    // const totalUnitsData = seriesData.map((item: any) => [item.Date, item.totalUnits])
     const totalCostData = seriesData.map((item: any) => [item.Date, item.totalCost])
     const totalValueData = seriesData.map((item: any) => [item.Date, item.totalValue])
     const profitPercentData = seriesData.map((item: any) => [item.Date, item.profitPercent])
@@ -141,11 +139,13 @@ const loadTickerData = async (ticker: string, year: number, amount: number) => {
     console.error(`Error loading data for ${ticker}:`, error)
   }
 }
+
 onMounted(() => {
   if (props.ticker && props.year && props.amount) {
     loadTickerData(props.ticker, props.year, props.amount)
   }
 })
+
 watch([() => props.ticker, () => props.year, () => props.amount], ([newTicker, year, amount]) => {
   if (newTicker && year && amount) {
     loadTickerData(newTicker, year, amount)
@@ -155,7 +155,7 @@ watch([() => props.ticker, () => props.year, () => props.amount], ([newTicker, y
 
 <style scoped>
 .chart-container {
-  height: 650px; /* Set your desired height here */
+  height: 650px; /* Set a larger height for the chart */
 }
 
 .hc {

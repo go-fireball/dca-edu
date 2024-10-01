@@ -1,7 +1,6 @@
-<!-- pages/products/[id].vue -->
+<!-- pages/stocks/[id].vue -->
 <template>
-  <div>
-    <h1>Product Page</h1>
+  <div class="content">
     <!-- Pass the dynamic ID to the child component as a prop -->
     <Stock :ticker="ticker"/>
   </div>
@@ -9,9 +8,15 @@
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import ProductDetails from '~/components/Stock.vue'
+import Stock from '~/components/Stock.vue'
 
 // Access the route parameter
 const route = useRoute()
-const ticker = route.params.id // Get the dynamic ID from the route
+const ticker = route.params.ticker as string // Get the dynamic ID from the route
 </script>
+<style scoped>
+.content {
+  margin-top: 10px; /* Adjust this value as needed */
+  padding: 1rem;
+}
+</style>

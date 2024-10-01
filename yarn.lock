@@ -646,11 +646,6 @@
   resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-2.1.1.tgz#b9da6a878a371829a0502c9b6c1c143ef6663f4d"
   integrity sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==
 
-"@highcharts/map-collection@^2.0.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@highcharts/map-collection/-/map-collection-2.3.0.tgz#de3be04bb530d72ecd6adf6453480899a0fa44c5"
-  integrity sha512-lknEzFw9u8BA+8J7Y1cDP0N0FxZKSJgKwTn+e8vHsBH1Xj5RYNmPJeac/3Tse0JDgKfsCT43ZHG95W9xZbSTWw==
-
 "@ioredis/commands@^1.1.1":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ioredis/commands/-/commands-1.2.0.tgz#6d61b3097470af1fdbbe622795b8921d42018e11"
@@ -2850,10 +2845,15 @@ hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
-highcharts@^11.1.0:
+highcharts-vue@^2.0.1:
+  version "2.0.1"
+  resolved "https://kochag.pkgs.visualstudio.com/_packaging/KochAg/npm/registry/highcharts-vue/-/highcharts-vue-2.0.1.tgz#296bc6131caadb84edb30524cbd40e302976a52d"
+  integrity sha1-KWvGExyq24TtswUky9QOMCl2pS0=
+
+highcharts@^11.4.8:
   version "11.4.8"
-  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-11.4.8.tgz#252e71b81c24ec9f99e756b76dbebd7546e18dda"
-  integrity sha512-5Tke9LuzZszC4osaFisxLIcw7xgNGz4Sy3Jc9pRMV+ydm6sYqsPYdU8ELOgpzGNrbrRNDRBtveoR5xS3SzneEA==
+  resolved "https://kochag.pkgs.visualstudio.com/_packaging/KochAg/npm/registry/highcharts/-/highcharts-11.4.8.tgz#252e71b81c24ec9f99e756b76dbebd7546e18dda"
+  integrity sha1-JS5xuBwk7J+Z51a3bb69dUbhjdo=
 
 hookable@^5.5.3:
   version "5.5.3"
@@ -3620,15 +3620,6 @@ nuxi@^3.13.2:
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/nuxi/-/nuxi-3.14.0.tgz#697a1e8b4f0d92fb8b30aa355af9295fa8c2cb4e"
   integrity sha512-MhG4QR6D95jQxhnwKfdKXulZ8Yqy1nbpwbotbxY5IcabOzpEeTB8hYn2BFkmYdMUB0no81qpv2ldZmVCT9UsnQ==
-
-nuxt-highcharts@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/nuxt-highcharts/-/nuxt-highcharts-3.1.1.tgz#e537a472c5c96fc4b958fdfe32d625e0ec913929"
-  integrity sha512-bHUl8OF1WqJ0vUlDl4AAJHk1H6+sffSAMmB3xGu0oZcav93CQMVjxkjsGabXS321KVOyz+BbOrur3UtXYM4AIA==
-  dependencies:
-    highcharts "^11.1.0"
-  optionalDependencies:
-    "@highcharts/map-collection" "^2.0.0"
 
 nuxt@^3.13.0:
   version "3.13.2"

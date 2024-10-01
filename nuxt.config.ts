@@ -7,12 +7,9 @@ export default defineNuxtConfig({
         '@mdi/font/css/materialdesignicons.css', // Optional - For Material Icons
 
     ],
-    modules: [
-        // Simple usage
-        'nuxt-highcharts',
-
-        // With options
-        ['nuxt-highcharts', { /* module options */}]
+    plugins: [
+        // Ensure this runs on client side only
+        { src: '~/plugins/highcharts.client.ts', mode: 'client' }
     ],
     build: {
         transpile: ['vuetify'],

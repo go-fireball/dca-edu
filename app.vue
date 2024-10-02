@@ -10,8 +10,10 @@
         <v-divider></v-divider>
         <v-list density="compact" nav>
           <v-list-item :to="'/'" prepend-icon="mdi-home" title="Home"></v-list-item>
-          <v-list-item :to="{ name: 'stocks-ticker', params: { ticker: 'AAPL' } }" prepend-icon="mdi-home"
-                       title="Dollar Cost Averaging"></v-list-item>
+          <v-list-item :to="{ name: 'stocks'}" prepend-icon="mdi-yin-yang"
+                       title="Stocks"></v-list-item>
+          <v-list-item :to="{ name: 'stocks-ticker', params: { ticker: 'AAPL' } }" prepend-icon="mdi-chart-line"
+                       title="Charts"></v-list-item>
 
         </v-list>
       </v-navigation-drawer>

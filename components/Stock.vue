@@ -43,3 +43,9 @@ const handleAmountUpdate = (amount: number | null) => {
 }
 
 </script>
+<style scoped>
+.content {
+  margin-top: 10px; /* Adjust this value as needed */
+  padding: 1rem;
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
   <!-- Set a larger height for the div containing the chart -->
   <div class="chart-container">
-    <highcharts :options="chartOptions" :modules="['exporting']"></highcharts>
+    <highcharts :options="chartOptions" :modules="['exporting']" class="hc"></highcharts>
   </div>
   <!-- Add the warning message below the chart -->
   <div class="investment-warning">
@@ -155,7 +155,7 @@ watch([() => props.ticker, () => props.year, () => props.amount], ([newTicker, y
 
 <style scoped>
 .chart-container {
-  height: 650px; /* Set a larger height for the chart */
+  height: 600px; /* Set a larger height for the chart */
 }
 
 .hc {

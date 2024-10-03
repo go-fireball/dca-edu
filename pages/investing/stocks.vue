@@ -4,7 +4,7 @@
       title="Stocks"
       prevLink="/investing/introduction-to-investing"
       homeLink="/investing/intro"
-      nextLink="/construction"
+      nextLink="/investing/mutual-funds-and-etfs"
   >
     <template #content>
 

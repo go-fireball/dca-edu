@@ -1,7 +1,9 @@
 <template>
-  <PageLayout title="Welcome to the World of Investing!" prev-link="" home-link="/investing/intro"
-              next-link="/investing/introduction-to-investing">
-
+  <PageLayout
+      title="Welcome to the World of Investing!"
+      prev-link=""
+      home-link="/investing/intro"
+      next-link="/investing/introduction-to-investing">
 
     <template #content>
 

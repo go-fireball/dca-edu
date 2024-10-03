@@ -19,7 +19,10 @@ interface Props {
   nextLink: string;
 }
 
-defineProps<Props>();
+const props = defineProps<Props>();
+useHead({
+  title: props.title
+});
 </script>
 <style>
 .content-container {
@@ -33,11 +36,12 @@ defineProps<Props>();
 .content-container h1,
 .content-container h2 {
   color: #2c3e50;
+  margin-top: 20px;
 }
 
 p {
-  margin-top: 20px;
-  margin-bottom: 30px; /* Increase this value for more space between paragraphs */
+  margin-top: 15px;
+  margin-bottom: 20px; /* Increase this value for more space between paragraphs */
 }
 
 .nav-buttons {

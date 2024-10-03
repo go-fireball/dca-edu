@@ -16,7 +16,7 @@ const ticker = route.params.ticker as string // Get the dynamic ID from the rout
 </script>
 <style scoped>
 .content {
-  margin-top: 10px; /* Adjust this value as needed */
+  margin-top: 5px; /* Adjust this value as needed */
   padding: 1rem;
 }
 </style>

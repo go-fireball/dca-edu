@@ -3,6 +3,12 @@
   <div class="chart-container">
     <highcharts :options="chartOptions" :modules="['exporting']" class="hc"></highcharts>
   </div>
+  <div class="investment-summary" v-if="investmentSummary">
+    <strong>Total Investment: </strong> ${{ investmentSummary.totalInvestment.toFixed(2) }}
+    <strong>Total Units Purchased: </strong> {{ investmentSummary.totalUnits.toFixed(4) }}
+    <strong>Total Value: </strong> ${{ investmentSummary.totalValue.toFixed(2) }}
+    <strong>Profit Percentage: </strong> {{ investmentSummary.profitPercent.toFixed(2) }}%
+  </div>
   <!-- Add the warning message below the chart -->
   <div class="investment-warning">
     <strong>
@@ -10,10 +16,11 @@
       analysis does not account for commissions, fees, or taxes.
     </strong>
   </div>
+
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref, watch } from 'vue'
+import {onMounted, ref, watch} from 'vue'
 import axios from 'axios'
 
 const props = defineProps<{
@@ -21,6 +28,13 @@ const props = defineProps<{
   year: number | null
   amount: number | null
 }>()
+
+const investmentSummary = ref<{
+  totalInvestment: number,
+  totalUnits: number,
+  totalValue: number,
+  profitPercent: number
+} | null>(null)
 
 const chartOptions = ref({
   chart: {
@@ -134,7 +148,14 @@ const loadTickerData = async (ticker: string, year: number, amount: number) => {
       }
     ]
 
-    chartOptions.value.title.text = `${ticker} Dollar Cost Averaging`
+    chartOptions.value.title.text = `${ticker} Investment Starting ${year} with Daily Investment of $${amount}`
+
+    investmentSummary.value = {
+      totalInvestment: totalCost,
+      totalUnits: totalUnits,
+      totalValue: totalValue,
+      profitPercent: parseFloat((((totalValue - totalCost) / totalCost) * 100).toFixed(2))
+    }
   } catch (error) {
     console.error(`Error loading data for ${ticker}:`, error)
   }
@@ -155,7 +176,7 @@ watch([() => props.ticker, () => props.year, () => props.amount], ([newTicker, y
 
 <style scoped>
 .chart-container {
-  height: 600px; /* Set a larger height for the chart */
+  height: 550px; /* Set a larger height for the chart */
 }
 
 .hc {
@@ -173,5 +194,9 @@ watch([() => props.ticker, () => props.year, () => props.amount], ([newTicker, y
   border-radius: 5px;
   text-align: center;
   font-weight: bold;
+}
+
+.investment-summary {
+  text-align: center;
 }
 </style>

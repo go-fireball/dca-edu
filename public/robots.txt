@@ -1,4 +1,4 @@
-UserAgent: '*',
-Disallow: '/admin',  // Disallow specific paths
-Allow: '/',  // Allow the rest of the website
-Sitemap: 'https://d29k9gyuvafwel.cloudfront.net/sitemap.xml'
+UserAgent: *
+Disallow: /admin
+Allow: /
+Sitemap: https://d29k9gyuvafwel.cloudfront.net/sitemap.xml

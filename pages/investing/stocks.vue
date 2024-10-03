@@ -25,7 +25,7 @@
       <p>
         The stock market is where people buy and sell these pieces, called shares. When you own a
         share of a company, you share in its success or failure. If the company does well, the value
-        of your stock can go up, and you might make money. But if the company doesn’t do well, the
+        of your stock can go up, and you might make money. But if the company doesn't do well, the
         stock price could go down, and you could lose money.
       </p>
 
@@ -60,7 +60,7 @@
 
       <h2>Understanding Company Fundamentals</h2>
       <p>
-        When investing in stocks, it’s important to understand how well a company is doing. Just like
+        When investing in stocks, it's important to understand how well a company is doing. Just like
         you check the health of a plant by looking at its leaves and roots, you can check the health
         of a company by looking at its fundamentals.
       </p>
@@ -69,11 +69,11 @@
       <ul>
         <li>
           <strong>Earnings</strong>: This is the money a company makes after paying all its expenses.
-          If a company’s earnings are growing, that’s a good sign.
+          If a company's earnings are growing, that's a good sign.
         </li>
         <li>
           <strong>Price-to-Earnings (P/E) Ratio</strong>: This compares the price of a stock to the
-          company’s earnings. A lower P/E ratio might mean the stock is cheaper compared to its
+          company's earnings. A lower P/E ratio might mean the stock is cheaper compared to its
           earnings, while a high P/E ratio could mean the stock is more expensive.
         </li>
         <li>
@@ -91,7 +91,7 @@
       <p>
         Some companies not only grow in value but also pay a portion of their profits back to
         shareholders. These payments are called dividends. Dividends are like extra rewards for owning
-        the company’s stock.
+        the company's stock.
       </p>
 
       <p>
@@ -101,8 +101,8 @@
       </p>
 
       <p>
-        For example, let’s say you earn $10 in dividends from your stock this year, and you use that
-        $10 to buy more stock. Next year, you’ll not only earn dividends on your original investment
+        For example, let's say you earn $10 in dividends from your stock this year, and you use that
+        $10 to buy more stock. Next year, you'll not only earn dividends on your original investment
         but also on the new stock you bought with the $10. Over time, this cycle can make your
         investments grow even faster.
       </p>
@@ -111,13 +111,13 @@
 
       <p>
         Diversification is a big word, but it simply means not putting all your eggs in one basket.
-        When you invest, it’s important to spread your money across different companies and
-        industries. This way, if one company doesn’t do well, you won’t lose all your money.
+        When you invest, it's important to spread your money across different companies and
+        industries. This way, if one company doesn't do well, you won't lose all your money.
       </p>
 
       <p>
         For example, imagine you own stocks in both a toy company and a food company. If the toy
-        company doesn’t sell as many toys one year, the food company might still be doing well, which
+        company doesn't sell as many toys one year, the food company might still be doing well, which
         helps protect your overall investment.
       </p>
 

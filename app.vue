@@ -14,6 +14,8 @@
                        title="Stocks"></v-list-item>
           <v-list-item :to="{ name: 'stocks-ticker', params: { ticker: 'AAPL' } }" prepend-icon="mdi-chart-line"
                        title="Charts"></v-list-item>
+          <v-list-item :to="{ name: 'news'}" prepend-icon="mdi-newspaper"
+                       title="News"></v-list-item>
 
         </v-list>
       </v-navigation-drawer>

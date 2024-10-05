@@ -14,6 +14,18 @@
         adrenaline, but you feel safe knowing that you're going to have a smooth ride.
       </p>
 
+      <v-container>
+        <v-row justify="center" align="center" class="fill-height">
+          <v-col cols="auto">
+            <v-img
+                src="/images/roller_coaster.jpeg"
+                width="600px"
+                alt="A roller coaster on a steep drop"
+            ></v-img>
+          </v-col>
+        </v-row>
+      </v-container>
+
       <h2>Why Should You Learn About Investing?</h2>
       <p>
         You might be thinking, "Why should I even care about this? I'm just a kid." Well, learning

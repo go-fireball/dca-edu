@@ -6,7 +6,6 @@
       next-link="/investing/introduction-to-investing">
 
     <template #content>
-
       <p>
         Imagine this: you are at a carnival, and you see two different rides. One is a fast, spinning
         rollercoaster that takes you on sharp turns and drops. It's thrilling but also makes you
@@ -14,6 +13,18 @@
         entire view of the carnival, gently rising higher and higher. You don't get that rush of
         adrenaline, but you feel safe knowing that you're going to have a smooth ride.
       </p>
+
+      <v-container>
+        <v-row justify="center" align="center" class="fill-height">
+          <v-col cols="auto">
+            <v-img
+                src="/images/roller_coaster.jpeg"
+                width="600px"
+                alt="A roller coaster on a steep drop"
+            ></v-img>
+          </v-col>
+        </v-row>
+      </v-container>
 
       <h2>Why Should You Learn About Investing?</h2>
       <p>
@@ -74,8 +85,11 @@
         investments you can make, and how to protect yourself with options. For now, keep your eyes on
         the horizon and think about the long-term game!
       </p>
+
+
     </template>
   </PageLayout>
+
 </template>
 
 <script setup lang="ts">

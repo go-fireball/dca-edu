@@ -1,80 +1,49 @@
 <template>
   <PageLayout
-      title="2024-10-03 News"
+      title="Market Highlights"
       next-link=""
       home-link=""
       prev-link="">
     <template #content>
-      <h2>Stock Market Highlights for October 3, 2024</h2>
+      <h2>Stock Market Highlights for October 4, 2024</h2>
 
       <p>
-        The Nasdaq Composite edged up 0.1%, closing at 17,925.12, as markets reacted to a mix of strong job gains and
-        uncertainty around global events. With growing anticipation for Federal Reserve rate cuts in November, tech
-        stocks, despite some volatility, helped keep the Nasdaq in positive territory.
+        The Nasdaq Composite slipped slightly, down less than 0.1% to **17,918.48**, as investor sentiment was cautious ahead of upcoming job data. Several large tech stocks, including Amazon and Nvidia, experienced declines amid broader market volatility.
       </p>
 
-      <p>Key highlights in the tech sector today:</p>
+      <p>Key stock movements for today:</p>
 
       <ul>
         <li>
-          <strong>Nvidia (NVDA)</strong>: Nvidia's stock dipped 1.3% following a turbulent session as market fears about
-          economic cooling and potential supply chain issues impacted its AI chip production. Still, its leadership in
-          AI-driven GPU technology keeps Nvidia in focus as a dominant player.
+          <strong>Nvidia (NVDA)</strong>: Nvidia's stock fell by **1.2%**, driven by concerns over potential overheating in the AI market. While long-term demand for Nvidia’s AI chips remains strong, market caution was evident today, reflecting broader tech sector challenges.
         </li>
         <li>
-          <strong>Advanced Micro Devices (AMD)</strong>: AMD shares surged 1.8%, boosted by news of AI and data center
-          innovations. Its recent advancements in AI computing were well-received by investors who see AMD as a growing
-          force in the AI hardware race.
+          <strong>Amazon (AMZN)</strong>: Amazon dropped by **0.8%**, despite solid growth in its cloud division, AWS. Investors remain wary of potential supply chain disruptions, which could impact Amazon's delivery and tech services.
         </li>
         <li>
-          <strong>Salesforce (CRM)</strong>: Salesforce led the Dow with a 3.2% rise after announcing strong demand for
-          its AI-powered business solutions. Enterprise software remains a key driver for the company as businesses
-          accelerate their adoption of AI tools.
-        </li>
-        <li>
-          <strong>Meta Platforms (META)</strong>: Meta gained 0.9%, reflecting positive sentiment around its metaverse
-          ambitions and AI tools for businesses. Meta’s strategy continues to diversify its revenue streams, keeping it
-          attractive to both retail and institutional investors.
-        </li>
-        <li>
-          <strong>Amazon (AMZN)</strong>: Amazon's stock increased by 1.5% as its cloud division, AWS, reported growing
-          demand for AI-based cloud services. The company's focus on AI integration within AWS has spurred investor
-          confidence.
-        </li>
-        <li>
-          <strong>Apple (AAPL)</strong>: Apple saw modest gains of 0.4%, with expectations surrounding its iPhone 16
-          continuing to build ahead of its official launch. Apple remains a stable player in the consumer tech market,
-          leveraging AI for new features in its flagship devices.
+          <strong>Adobe (ADBE)</strong>: Adobe rose **1.5%**, benefiting from positive reception to its newly launched AI-driven creative tools for enterprise clients. Investors are optimistic about Adobe's growth trajectory as it expands its Creative Cloud offerings.
         </li>
       </ul>
 
-      <p>External Factors Affecting Markets:</p>
+      <p>External factors influencing the market:</p>
 
       <ul>
         <li>
-          <strong>Oil Prices and Middle East Tensions</strong>: Rising oil prices, driven by geopolitical tensions in
-          the Middle East, particularly conflicts in Israel and surrounding regions, have injected uncertainty into
-          global markets. Brent crude prices rose by 1.23%, signaling potential inflationary pressures ahead.
+          <strong>Middle East Tensions</strong>: Rising geopolitical tensions between **Israel and Hamas** have pushed **Brent crude** oil prices up by **1.23%**, contributing to inflationary concerns. This has added pressure on the tech sector, which is sensitive to rising production costs and consumer sentiment.
         </li>
         <li>
-          <strong>Global Supply Chain Concerns</strong>: Ongoing disruptions due to labor strikes at U.S. ports and
-          potential hurricanes affecting supply routes have cast a shadow over tech production, particularly for
-          companies like Nvidia and Apple that rely on intricate supply chains.
+          <strong>Supply Chain Disruptions</strong>: Strikes at key U.S. ports are delaying shipments of tech components. **Intel (INTC)** and other semiconductor companies are already reporting concerns about production slowdowns, which could impact earnings in upcoming quarters.
         </li>
         <li>
-          <strong>Federal Reserve Policy</strong>: Investors are increasingly betting on interest rate cuts in November,
-          especially after today’s jobs report showed stronger-than-expected job gains but cooling wage growth. While
-          the potential rate cuts are viewed positively by tech investors, there remains concern about the broader
-          economic outlook.
+          <strong>Federal Reserve Policy</strong>: Investors are closely monitoring the Federal Reserve’s next move, with expectations of a possible rate cut in **November**. Strong job data, combined with weaker wage growth, is leading to speculation about the potential easing of borrowing costs, which could provide relief to the tech sector.
         </li>
       </ul>
 
       <p>
-        As the tech sector continues to be shaped by AI developments, supply chain risks, and external events, investor
-        sentiment remains cautious but optimistic, with many seeing tech stocks as resilient in the face of global
-        challenges.
+        While **Adobe** performed well today, major tech names like **Nvidia** and **Amazon** experienced headwinds as market participants brace for further economic data releases and the impact of geopolitical events.
       </p>
     </template>
+
 
 
   </PageLayout>

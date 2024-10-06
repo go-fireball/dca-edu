@@ -22,6 +22,7 @@
 <script lang="ts" setup>
 import {onMounted, ref, watch} from 'vue'
 import axios from 'axios'
+import tickerService, {type TickerData} from "~/services/tickerService";
 
 const props = defineProps<{
   ticker: string | null
@@ -93,17 +94,17 @@ const chartOptions = ref({
 
 const loadTickerData = async (ticker: string, year: number, amount: number) => {
   try {
-    const response = await axios.get(`/data/${ticker}_1d.json`)
+    const response = await tickerService.fetchTickerData(ticker)
     // Timestamp for 1/1/2010
     const filterDate = new Date(`${year}-01-01`).getTime()
 
     // Filter the data to include only dates on or after 1/1/2010
-    const filteredData = response.data.filter((item: any) => item.Date >= filterDate)
+    const filteredData = response.filter((item: any) => item.Date >= filterDate)
 
     let totalUnits = 0
     let totalCost = 0
     let totalValue = 0
-    const seriesData = filteredData.map((item: any) => {
+    const seriesData = filteredData.map((item: TickerData) => {
       const cost = amount
       const units = parseFloat((cost / item.High).toFixed(4))
       totalUnits += units
@@ -127,22 +128,23 @@ const loadTickerData = async (ticker: string, year: number, amount: number) => {
 
     chartOptions.value.series = [
       {
-        data: priceData,
+
+        data: priceData as never[],
         name: `Price`,
         yAxis: 0
       },
       {
-        data: totalCostData,
+        data: totalCostData as never[],
         name: `Total Cost`,
         yAxis: 0
       },
       {
-        data: totalValueData,
+        data: totalValueData as never[],
         name: `Total Value`,
         yAxis: 0
       },
       {
-        data: profitPercentData,
+        data: profitPercentData as never[],
         name: `Profit Percentage`,
         yAxis: 1
       }

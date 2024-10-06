@@ -38,7 +38,7 @@
 
 <script lang="ts" setup>
 import { onMounted, ref, watch } from 'vue'
-import tickerService, { type TickerItem } from '@/services/tickerService'
+import symbolService, { type TickerItem } from '@/services/symbolService'
 
 // Define the refs for the ticker symbols and selected ticker
 const props = defineProps<{ ticker: string | null | undefined }>()
@@ -63,7 +63,7 @@ watch(selectedAmount, () => {
 // Load the ticker symbols from the symbols.json file
 const loadTickerSymbols = async () => {
   try {
-    tickerSymbols.value = await tickerService.fetchTickerData() // Replace with the actual path to your symbols.json
+    tickerSymbols.value = await symbolService.fetchSymbols() // Replace with the actual path to your symbols.json
   } catch (error) {
     console.error('Error loading ticker symbols:', error)
   }

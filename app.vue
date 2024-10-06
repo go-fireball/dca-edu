@@ -16,6 +16,8 @@
                        title="Charts"></v-list-item>
           <v-list-item :to="{ name: 'news'}" prepend-icon="mdi-newspaper"
                        title="News"></v-list-item>
+          <v-list-item :to="{ name: 'analysis'}" prepend-icon="mdi-google-analytics"
+                       title="Stock Analysis"></v-list-item>
 
         </v-list>
       </v-navigation-drawer>

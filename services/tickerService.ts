@@ -1,61 +1,55 @@
 // tickerService.ts
 import axios from 'axios'
 
-// Define the structure of a ticker item (assumed to have 'text' and possibly other properties)
-export interface TickerItem {
-    value: string
-    text: string
-    market: string
-    [key: string]: any // This allows for additional properties in the data
+export interface TickerInfo {
+    timestamp: number
+    market_cap: number
+    pe_ratio: number
+    roe: number
+    debt_to_equity: number
+    current_ratio: number
+    operating_margin: number
+    free_cash_flow: number
+    trailing_peg_ratio: number
+    earning_growth: number
+    revenue_growth: number
+    ebitda_margin: number
+    price_to_book: number
+    held_percent_institution: number
 }
 
-// Define a grouped structure for markets
-export interface GroupedTickerItems {
-    [market: string]: TickerItem[]
+export interface TickerData {
+    Date: number
+    Open: number
+    High: number
+    Low: number
+    Close: number
+    Volume: number
+    Dividends: number
 }
 
-const fetchTickerData = async (): Promise<TickerItem[]> => {
+
+const fetchTickerInfo = async (ticker: string): Promise<TickerInfo> => {
     try {
-        const response = await axios.get<TickerItem[]>('/symbols.json') // Fetch the JSON file
-        const data = response.data
-
-        // Sort the data by the 'text' property
-        const sortedData = data.sort((a, b) => {
-            if (a.text < b.text) return -1
-            if (a.text > b.text) return 1
-            return 0
-        })
-
-        return sortedData // Return sorted data
+        const response = await axios.get<TickerInfo>(`/data/ticker_info/${ticker}_ticker_info.json`) // Fetch the JSON file
+        return response.data // Return sorted data
     } catch (error) {
         console.error('Error fetching ticker data:', error)
         throw error // Re-throw the error so it can be handled in the component
     }
 }
 
-const fetchTickerDataByGroup = async (): Promise<GroupedTickerItems> => {
-    const tickerItems = await fetchTickerData()
-
-    const groupedData = tickerItems.reduce((acc: GroupedTickerItems, item: TickerItem) => {
-        if (!acc[item.market]) {
-            acc[item.market] = []
-        }
-        acc[item.market].push(item)
-        return acc
-    }, {})
-
-    // Sort the data in each market group by the 'text' property
-    Object.keys(groupedData).forEach((market) => {
-        groupedData[market].sort((a, b) => {
-            if (a.text < b.text) return -1
-            if (a.text > b.text) return 1
-            return 0
-        })
-    })
-    return groupedData
+const fetchTickerData = async (ticker:string): Promise<TickerData[]> =>{
+    try {
+        const response = await axios.get<TickerData[]>(`/data/${ticker}_1d.json`) // Fetch the JSON file
+        return response.data // Return sorted data
+    } catch (error) {
+        console.error('Error fetching ticker data:', error)
+        throw error // Re-throw the error so it can be handled in the component
+    }
 }
 
 export default {
-    fetchTickerData,
-    fetchTickerDataByGroup
+    fetchTickerInfo,
+    fetchTickerData
 }

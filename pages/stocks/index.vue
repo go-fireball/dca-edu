@@ -42,10 +42,9 @@
           <!-- Display the market group name -->
           <ul>
             <li v-for="ticker in tickers" :key="ticker.value">
-              <router-link :to="{ name: 'stocks-ticker', params: { ticker: ticker.value } }"
-              >{{ ticker.text }} ({{ ticker.value }})
-              </router-link
-              >
+              <router-link :to="{ name: 'stocks-ticker', params: { ticker: ticker.value } }">
+                {{ ticker.text }} ({{ ticker.value }})
+              </router-link>
             </li>
           </ul>
         </div>
@@ -56,7 +55,7 @@
 <script lang="ts" setup>
 import {ref, onMounted} from 'vue'
 import PageLayout from '@/components/PageLayout.vue';
-import tickerService, {type GroupedTickerItems} from '@/services/tickerService'
+import symbolService, {type GroupedTickerItems} from '@/services/symbolService'
 
 const groupedTickerData = ref<GroupedTickerItems>({})
 const loading = ref(true)
@@ -64,7 +63,7 @@ const loading = ref(true)
 // Fetch ticker data from the external symbol.json file
 const tickerDataByGroup = async () => {
   try {
-    groupedTickerData.value = await tickerService.fetchTickerDataByGroup()
+    groupedTickerData.value = await symbolService.fetchSymbolsByMarket()
   } catch (error) {
     console.error('Error fetching ticker data:', error)
   } finally {

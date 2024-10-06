@@ -107,4 +107,18 @@
 </template>
 <script setup lang="ts">
 import PageLayout from '@/components/PageLayout.vue';
+
+useHead({
+  title: 'Mutual Funds and ETFs - How They Work and Their Role in Long-Term Investing',
+  meta: [
+    {
+      name: 'description',
+      content: 'Learn about mutual funds and ETFs, how they work, and how to select them for long-term growth. Understand their differences, the role of index funds, and the benefits of diversification in investing.'
+    },
+    {
+      name: 'keywords',
+      content: 'mutual funds, ETFs, index funds, long-term investing, diversification, investing strategies, stock market, fund selection'
+    }
+  ]
+});
 </script>

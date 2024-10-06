@@ -81,4 +81,19 @@
 </template>
 <script setup lang="ts">
 import PageLayout from '@/components/AnalysisPageLayout.vue';
+
+
+useHead({
+  title: 'Stock Market News for October 3, 2024 - Tech Sector Highlights',
+  meta: [
+    {
+      name: 'description',
+      content: 'Stock market highlights for October 3, 2024, focusing on the tech sector, including movements from Nvidia, AMD, Salesforce, Meta, Amazon, and Apple. Key external factors such as oil prices, global supply chain issues, and Federal Reserve policy are also discussed.'
+    },
+    {
+      name: 'keywords',
+      content: 'stock market news, October 2024, tech sector, Nvidia, AMD, Salesforce, Meta, Amazon, Apple, oil prices, Federal Reserve, supply chain, AI stocks'
+    }
+  ]
+});
 </script>

@@ -94,4 +94,18 @@
 
 <script setup lang="ts">
 import PageLayout from '@/components/PageLayout.vue';
+
+useHead({
+  title: 'Welcome to the World of Investing - Learn How to Grow Your Money',
+  meta: [
+    {
+      name: 'description',
+      content: 'An introduction to the world of investing for beginners. Learn the basics of long-term investing, Dollar-Cost Averaging, and how to make your money grow with smart financial strategies.'
+    },
+    {
+      name: 'keywords',
+      content: 'introduction to investing, long-term investing, Dollar-Cost Averaging, grow your money, financial literacy, stocks, mutual funds, options'
+    }
+  ]
+});
 </script>

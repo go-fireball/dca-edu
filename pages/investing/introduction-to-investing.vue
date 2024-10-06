@@ -134,4 +134,18 @@
 </template>
 <script setup lang="ts">
 import PageLayout from '@/components/PageLayout.vue';
+
+useHead({
+  title: 'Introduction to Investing - Learn the Basics of Growing Your Money',
+  meta: [
+    {
+      name: 'description',
+      content: 'Understand the basics of investing, including risk vs. reward, types of investments, diversification, and compounding. Learn how to start investing for long-term growth.'
+    },
+    {
+      name: 'keywords',
+      content: 'investing, introduction to investing, risk vs reward, stocks, bonds, mutual funds, ETFs, compounding, diversification, long-term investment'
+    }
+  ]
+});
 </script>

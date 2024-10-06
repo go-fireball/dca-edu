@@ -1,5 +1,6 @@
 // tickerService.ts
 import axios from 'axios'
+import {onMounted} from "vue";
 
 // Define the structure of a ticker item (assumed to have 'text' and possibly other properties)
 export interface TickerItem {
@@ -17,7 +18,7 @@ export interface GroupedTickerItems {
 
 const fetchSymbols = async (): Promise<TickerItem[]> => {
     try {
-        const response = await axios.get<TickerItem[]>('/symbols.json') // Fetch the JSON file
+        const response = await axios.get<TickerItem[]>(`/symbols.json`) // Fetch the JSON file
         const data = response.data
 
         // Sort the data by the 'text' property

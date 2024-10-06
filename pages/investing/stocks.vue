@@ -132,4 +132,18 @@
 
 <script setup lang="ts">
 import PageLayout from '@/components/PageLayout.vue';
+
+useHead({
+  title: 'Introduction to Stocks - What Are Stocks and How Do They Work?',
+  meta: [
+    {
+      name: 'description',
+      content: 'Learn about stocks, how they work, and how to invest in them for long-term growth. Understand stock fundamentals, dividends, and diversification to make informed investment decisions.'
+    },
+    {
+      name: 'keywords',
+      content: 'stocks, investing in stocks, stock fundamentals, stock market, dividends, long-term investment, stock diversification'
+    }
+  ]
+});
 </script>

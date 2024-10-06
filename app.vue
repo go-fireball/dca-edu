@@ -7,7 +7,6 @@
       </v-app-bar>
 
       <v-navigation-drawer v-model="drawer" app temporary rail expand-on-hover>
-        <v-divider></v-divider>
         <v-list density="compact" nav>
           <v-list-item :to="'/'" prepend-icon="mdi-home" title="Home"></v-list-item>
           <v-list-item :to="{ name: 'stocks'}" prepend-icon="mdi-yin-yang"

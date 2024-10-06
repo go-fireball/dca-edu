@@ -2,7 +2,7 @@
   <PageLayout title="Mutual Funds and ETFs"
               prev-link="/investing/stocks"
               home-link="/investing/intro"
-              next-link=""
+              next-link="/investing/dollar-cost-averaging"
   >
     <template #content>
       <h2>What Are Mutual Funds and ETFs?</h2>

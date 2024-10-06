@@ -88,9 +88,7 @@
 
       <p>Here's how it might look:</p>
       <v-data-table
-          :headers="headers"
-          :items="items"
-          class="elevation-1"
+          :items="items" :headers="headers" disable-sort fixed-footer
       ></v-data-table>
 
       <p>Over six months, you would have bought shares at different prices. In the end, you've bought a total of 67.7
@@ -124,19 +122,20 @@
 import PageLayout from '@/components/PageLayout.vue';
 
 const headers = [
-  {text: 'Month', value: 'month'},
-  {text: 'Stock Price', value: 'stock_price'},
-  {text: 'Amount Invested', value: 'amount_invested'},
-  {text: 'Shares Bought', value: 'shares_bought'},
-]
+  {title: 'Month', value: 'month'},
+  {title: 'Stock Price', value: 'stock_price'},
+  {title: 'Amount Invested', value: 'amount_invested'},
+  {title: 'Shares Bought', value: 'shares_bought'},
+];
+
 const items = [
-  {month: 1, stock_price: '$10', amount_invested: '$100', shares_bought: 10},
-  {month: 2, stock_price: '$8', amount_invested: '$100', shares_bought: 12.5},
+  {month: 1, stock_price: '$10', amount_invested: '$100', shares_bought: 10.00},
+  {month: 2, stock_price: '$8', amount_invested: '$100', shares_bought: 12.50},
   {month: 3, stock_price: '$6', amount_invested: '$100', shares_bought: 16.67},
   {month: 4, stock_price: '$9', amount_invested: '$100', shares_bought: 11.11},
   {month: 5, stock_price: '$11', amount_invested: '$100', shares_bought: 9.09},
   {month: 6, stock_price: '$12', amount_invested: '$100', shares_bought: 8.33},
-]
+];
 
 useHead({
   title: 'Dollar-Cost Averaging (DCA) - Long-Term Investment Strategy',

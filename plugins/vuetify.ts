@@ -19,6 +19,7 @@ import {
     VListItem,
     VBtn,
     VSelect,
+    VDataTable
 
 } from 'vuetify/components';
 
@@ -48,7 +49,8 @@ export default defineNuxtPlugin(nuxtApp => {
             VListItemTitle,
             VListItem,
             VBtn,
-            VSelect
+            VSelect,
+            VDataTable,
         },
         directives
     })

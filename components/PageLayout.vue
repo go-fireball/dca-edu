@@ -62,4 +62,34 @@ p {
 .nav-buttons .button:hover {
   background-color: #34495e;
 }
+
+
+hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 2px solid #eee;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+ul li {
+  font-size: 1.2rem;
+}
 </style>

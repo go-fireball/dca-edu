@@ -1,7 +1,26 @@
 // plugins/vuetify.ts
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
+import {createVuetify} from 'vuetify'
 import * as directives from 'vuetify/directives'
+import {
+    VApp,
+    VAppBar,
+    VAppBarNavIcon,
+    VNavigationDrawer,
+    VRow,
+    VCol,
+    VContainer,
+    VImg,
+    VToolbarTitle,
+    VToolbar,
+    VMain,
+    VDivider,
+    VList,
+    VListItemTitle,
+    VListItem,
+    VBtn,
+    VSelect,
+
+} from 'vuetify/components';
 
 export default defineNuxtPlugin(nuxtApp => {
     const vuetify = createVuetify({
@@ -12,7 +31,25 @@ export default defineNuxtPlugin(nuxtApp => {
                 dark: {}
             }
         },
-        components,
+        components: {
+            VApp,
+            VAppBar,
+            VAppBarNavIcon,
+            VNavigationDrawer,
+            VRow,
+            VCol,
+            VContainer,
+            VImg,
+            VToolbarTitle,
+            VToolbar,
+            VMain,
+            VDivider,
+            VList,
+            VListItemTitle,
+            VListItem,
+            VBtn,
+            VSelect
+        },
         directives
     })
 

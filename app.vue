@@ -18,7 +18,8 @@
                        title="News"></v-list-item>
           <v-list-item :to="{ name: 'analysis'}" prepend-icon="mdi-google-analytics"
                        title="Stock Analysis"></v-list-item>
-
+          <v-list-item :to="{ name: 'glossary'}" prepend-icon="mdi-book-open-variant"
+                       title="Glossary"></v-list-item>
         </v-list>
       </v-navigation-drawer>
     </client-only>
@@ -33,4 +34,14 @@
 import {ref} from 'vue'
 
 const drawer = ref(false)
+
+useHead({
+  link: [
+    {
+      rel: 'stylesheet',
+      href: 'https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css'
+    },
+    {rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/vuetify@3.7.2/dist/vuetify.min.css'}
+  ]
+})
 </script>

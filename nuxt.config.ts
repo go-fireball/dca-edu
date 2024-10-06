@@ -4,8 +4,8 @@ export default defineNuxtConfig({
     devtools: {enabled: true},
 
     css: [
-        'vuetify/styles',
-        '@mdi/font/css/materialdesignicons.css', // Optional - For Material Icons
+        // 'vuetify/styles',
+        // '@mdi/font/css/materialdesignicons.css', // Optional - For Material Icons
 
     ],
 

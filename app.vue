@@ -3,7 +3,7 @@
     <client-only>
       <v-app-bar app color="primary" dark>
         <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-        <v-toolbar-title>Dollar Cost Averaging</v-toolbar-title>
+        <v-toolbar-title>Grow Wise Investments</v-toolbar-title>
       </v-app-bar>
 
       <v-navigation-drawer v-model="drawer" app temporary rail expand-on-hover>

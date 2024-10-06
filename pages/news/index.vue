@@ -76,5 +76,19 @@
   </PageLayout>
 </template>
 <script setup lang="ts">
-import PageLayout from '@/components/PageLayout.vue';
+import PageLayout from '@/components/AnalysisPageLayout.vue';
+
+useHead({
+  title: 'Market Highlights - Stock Market Updates for October 4, 2024',
+  meta: [
+    {
+      name: 'description',
+      content: 'Key stock market highlights for October 4, 2024, focusing on tech sector movers, geopolitical risks, and upcoming earnings reports.'
+    },
+    {
+      name: 'keywords',
+      content: 'stock market highlights, tech stocks, market updates, earnings season, geopolitical risks, market volatility'
+    }
+  ]
+});
 </script>

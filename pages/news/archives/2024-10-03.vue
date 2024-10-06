@@ -80,5 +80,5 @@
   </PageLayout>
 </template>
 <script setup lang="ts">
-import PageLayout from '@/components/PageLayout.vue';
+import PageLayout from '@/components/AnalysisPageLayout.vue';
 </script>

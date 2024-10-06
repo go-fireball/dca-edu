@@ -13,7 +13,14 @@
 
       <ul>
         <li>
-          <router-link :to="{ path: '/analysis/nvda' }">NVDA</router-link>
+          <router-link :to="{ path: '/analysis/aapl' }">Apple Inc. (AAPL)</router-link>
+        </li>
+        <li>
+          <router-link :to="{ path: '/analysis/nvda' }">NVIDIA (NVDA)</router-link>
+        </li>
+
+        <li>
+          <router-link :to="{ path: '/analysis/divislab-ns' }">Divi's Laboratories Ltd (DIVISLAB.NS)</router-link>
         </li>
       </ul>
 
@@ -23,4 +30,18 @@
 
 <script setup lang="ts">
 import PageLayout from '@/components/PageLayout.vue';
+
+useHead({
+  title: 'Stock Analysis Overview - In-Depth Financial Insights',
+  meta: [
+    {
+      name: 'description',
+      content: 'Explore detailed stock analysis with financial metrics, performance trends, and sector comparisons for companies like Apple and NVIDIA.'
+    },
+    {
+      name: 'keywords',
+      content: 'stock analysis, financial metrics, Apple, NVIDIA, stock performance, investment decisions'
+    }
+  ]
+});
 </script>

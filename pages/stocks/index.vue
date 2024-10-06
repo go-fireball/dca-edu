@@ -70,6 +70,19 @@ const tickerDataByGroup = async () => {
     loading.value = false
   }
 }
+useHead({
+  title: 'Dollar-Cost Averaging (DCA) - Investment Strategy Overview',
+  meta: [
+    {
+      name: 'description',
+      content: 'Learn about Dollar-Cost Averaging (DCA), an investment strategy that helps reduce market risk by making periodic purchases regardless of asset price fluctuations.'
+    },
+    {
+      name: 'keywords',
+      content: 'Dollar-Cost Averaging, DCA, investment strategy, stock market, periodic investments, market volatility, long-term growth'
+    }
+  ]
+});
 
 onMounted(tickerDataByGroup) // Fetch the data when the component is mounted
 </script>

@@ -53,7 +53,7 @@
   </PageLayout>
 </template>
 <script lang="ts" setup>
-import {ref, onMounted} from 'vue'
+import {onMounted, ref} from 'vue'
 import PageLayout from '@/components/PageLayout.vue';
 import symbolService, {type GroupedTickerItems} from '@/services/symbolService'
 
@@ -86,57 +86,3 @@ useHead({
 
 onMounted(tickerDataByGroup) // Fetch the data when the component is mounted
 </script>
-<style scoped>
-.content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 1.6rem;
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-
-p {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-}
-
-hr {
-  margin: 30px 0;
-  border: none;
-  border-top: 2px solid #eee;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-ul li a {
-  color: #3498db;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-ul li a:hover {
-  text-decoration: underline;
-}
-
-ul li {
-  font-size: 1.2rem;
-}
-</style>

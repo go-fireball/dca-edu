@@ -13,12 +13,26 @@
 
       <ul>
         <li>
+          <router-link :to="{ path: '/analysis/amzn' }">Amazon.com, Inc. (AMZN)</router-link>
+        </li>
+        <li>
+          <router-link :to="{ path: '/analysis/google' }">Alphabet Inc. (GOOG)</router-link>
+        </li>
+        <li>
+          <router-link :to="{ path: '/analysis/msft' }">Microsoft Corporation (MSFT)</router-link>
+        </li>
+        <li>
+          <router-link :to="{ path: '/analysis/dpz' }">Domino's Pizza, Inc. (DPZ)</router-link>
+        </li>
+        <li>
+          <router-link :to="{ path: '/analysis/nflx' }">Netflix, Inc. (NFLX)</router-link>
+        </li>
+        <li>
           <router-link :to="{ path: '/analysis/aapl' }">Apple Inc. (AAPL)</router-link>
         </li>
         <li>
           <router-link :to="{ path: '/analysis/nvda' }">NVIDIA (NVDA)</router-link>
         </li>
-
         <li>
           <router-link :to="{ path: '/analysis/divislab-ns' }">Divi's Laboratories Ltd (DIVISLAB.NS)</router-link>
         </li>

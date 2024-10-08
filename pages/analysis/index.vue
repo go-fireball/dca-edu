@@ -13,6 +13,15 @@
 
       <ul>
         <li>
+          <router-link :to="{ path: '/analysis/tesla' }">Tesla, Inc. (TSLA)</router-link>
+        </li>
+        <li>
+          <router-link :to="{ path: '/analysis/palantir' }">Palantir Technologies Inc. (PLTR)</router-link>
+        </li>
+        <li>
+          <router-link :to="{ path: '/analysis/asml' }">ASML Holding N.V. (ASML)</router-link>
+        </li>
+        <li>
           <router-link :to="{ path: '/analysis/amzn' }">Amazon.com, Inc. (AMZN)</router-link>
         </li>
         <li>
@@ -43,18 +52,18 @@
 </template>
 
 <script setup lang="ts">
-import PageLayout from '@/components/PageLayout.vue';
+import PageLayout from '@/components/AnalysisPageLayout.vue';
 
 useHead({
-  title: 'Stock Analysis Overview - In-Depth Financial Insights',
+  title: 'Stock Analysis Overview - Financial Insights and Market Comparison',
   meta: [
     {
       name: 'description',
-      content: 'Explore detailed stock analysis with financial metrics, performance trends, and sector comparisons for companies like Apple and NVIDIA.'
+      content: 'Explore detailed stock analysis for individual companies, including key financial metrics like Price-to-Earnings (P/E) ratio, performance trends, and competitive sector comparisons. Learn more about the growth potential or risks of stocks like Amazon, Microsoft, Netflix, and others.'
     },
     {
       name: 'keywords',
-      content: 'stock analysis, financial metrics, Apple, NVIDIA, stock performance, investment decisions'
+      content: 'stock analysis, financial metrics, P/E ratio, stock performance, sector comparison, Amazon, Microsoft, Netflix, Alphabet, ASML, NVIDIA'
     }
   ]
 });

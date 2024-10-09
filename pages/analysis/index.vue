@@ -13,6 +13,9 @@
 
       <ul>
         <li>
+          <router-link :to="{ path: '/analysis/amat' }">Applied Materials, Inc. (AMAT)</router-link>
+        </li>
+        <li>
           <router-link :to="{ path: '/analysis/tesla' }">Tesla, Inc. (TSLA)</router-link>
         </li>
         <li>

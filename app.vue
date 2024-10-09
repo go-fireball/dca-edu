@@ -17,6 +17,8 @@
                        title="News"></v-list-item>
           <v-list-item :to="{ name: 'analysis'}" prepend-icon="mdi-google-analytics"
                        title="Stock Analysis"></v-list-item>
+          <v-list-item :to="{ name: 'tools'}" prepend-icon="mdi-tools"
+                       title="Tools"></v-list-item>
           <v-list-item :to="{ name: 'glossary'}" prepend-icon="mdi-book-open-variant"
                        title="Glossary"></v-list-item>
         </v-list>

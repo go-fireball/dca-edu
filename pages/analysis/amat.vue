@@ -44,7 +44,7 @@
 <script setup lang="ts">
 import PageLayout from '@/components/AnalysisPageLayout.vue';
 
-const todayDate = new Date('2024-10-07').toLocaleDateString(undefined, {
+const todayDate = new Date('2024-10-08').toLocaleDateString(undefined, {
   year: 'numeric',
   month: 'long',
   day: 'numeric'

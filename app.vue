@@ -13,8 +13,8 @@
                        title="Stocks"></v-list-item>
           <v-list-item :to="{ name: 'stocks-ticker', params: { ticker: 'AAPL' } }" prepend-icon="mdi-chart-line"
                        title="Charts"></v-list-item>
-          <v-list-item :to="{ name: 'news'}" prepend-icon="mdi-newspaper"
-                       title="News"></v-list-item>
+          <v-list-item :to="{ name: 'market-today'}" prepend-icon="mdi-newspaper"
+                       title="Market Today"></v-list-item>
           <v-list-item :to="{ name: 'analysis'}" prepend-icon="mdi-google-analytics"
                        title="Stock Analysis"></v-list-item>
           <v-list-item :to="{ name: 'tools'}" prepend-icon="mdi-tools"

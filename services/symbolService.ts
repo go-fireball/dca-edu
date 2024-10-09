@@ -18,8 +18,8 @@ export interface GroupedTickerItems {
 
 const fetchSymbols = async (): Promise<TickerItem[]> => {
     try {
-        const response = await axios.get<TickerItem[]>(`/symbols.json`) // Fetch the JSON file
-        const data = response.data
+        const response = await fetch('/symbols.json') // Fetch the JSON file
+        const data: TickerItem[] = await response.json()
 
         // Sort the data by the 'text' property
         const sortedData = data.sort((a, b) => {

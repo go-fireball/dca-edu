@@ -70,6 +70,7 @@ const tickerDataByGroup = async () => {
     loading.value = false
   }
 }
+
 useHead({
   title: 'Dollar-Cost Averaging (DCA) - Investment Strategy Overview',
   meta: [

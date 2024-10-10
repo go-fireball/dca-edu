@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: {enabled: true},
+    ssr: true,
+    nitro: {
+        preset: 'aws-lambda' // Use the AWS Lambda preset
+    },
     app: {
         head: {
             meta: [

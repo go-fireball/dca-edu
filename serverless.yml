@@ -1,0 +1,23 @@
+service: nuxt3-lambda-app
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1 # or your preferred region
+  environment:
+    NODE_ENV: production
+
+package:
+  individually: true
+
+functions:
+  nuxt3App:
+    handler: .output/server/index.handler
+    events:
+      - httpApi:
+          path: /
+          method: GET
+      - httpApi:
+          path: '{proxy+}'
+          method: ANY
+plugins:
+  - serverless-offline

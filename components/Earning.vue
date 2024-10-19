@@ -3,12 +3,6 @@
   <div class="chart-container">
     <highcharts :options="chartOptions" :modules="['exporting']" class="hc"></highcharts>
   </div>
-  <div class="investment-summary" v-if="investmentSummary">
-    <strong>Total Investment: </strong> ${{ investmentSummary.totalInvestment.toFixed(2) }}
-    <strong>Total Units Purchased: </strong> {{ investmentSummary.totalUnits.toFixed(4) }}
-    <strong>Total Value: </strong> ${{ investmentSummary.totalValue.toFixed(2) }}
-    <strong>Profit Percentage: </strong> {{ investmentSummary.profitPercent.toFixed(2) }}%
-  </div>
   <!-- Add the warning message below the chart -->
   <div class="investment-warning">
     <strong>
@@ -21,9 +15,9 @@
 
 <script lang="ts" setup>
 import {onMounted, ref, watch} from 'vue'
-
-import type {TickerData} from "~/services";
+import axios from 'axios'
 import tickerService from "~/services/tickerService";
+import type {TickerData} from "~/services/types/tickerData";
 
 const props = defineProps<{
   ticker: string | null

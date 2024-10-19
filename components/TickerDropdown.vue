@@ -38,7 +38,8 @@
 
 <script lang="ts" setup>
 import { onMounted, ref, watch } from 'vue'
-import symbolService, { type TickerItem } from '@/services/symbolService'
+import symbolService from '@/services/symbolService'
+import type {TickerItem} from "~/services";
 
 // Define the refs for the ticker symbols and selected ticker
 const props = defineProps<{ ticker: string | null | undefined }>()

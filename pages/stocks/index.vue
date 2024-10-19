@@ -55,7 +55,8 @@
 <script lang="ts" setup>
 import {onMounted, ref} from 'vue'
 import PageLayout from '@/components/PageLayout.vue';
-import symbolService, {type GroupedTickerItems} from '@/services/symbolService'
+import symbolService from '@/services/symbolService'
+import type {GroupedTickerItems} from "~/services";
 
 const groupedTickerData = ref<GroupedTickerItems>({})
 const loading = ref(true)

@@ -5,6 +5,11 @@
       prev-link=""
       title="Tools for Investing">
     <template #content>
+
+      <h2>
+        <router-link :to="{ path: '/tools/compare-stocks' }">Compare Stocks</router-link>
+      </h2>
+
       <h2>
         <router-link :to="{ path: '/tools/buy-write-calculator' }">Buy Write Options Calculator</router-link>
       </h2>
@@ -24,6 +29,7 @@
         <strong>Annualized ROI:</strong>Both the premium and profit return rates are displayed on an annualized basis
         to help you compare the potential investment returns with other strategies.
       </p>
+
 
     </template>
 

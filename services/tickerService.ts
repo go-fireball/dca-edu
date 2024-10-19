@@ -16,7 +16,7 @@ const fetchTickerInfo = async (ticker: string): Promise<TickerInfo[]> => {
 
 const fetchTickerData = async (ticker:string): Promise<TickerData[]> =>{
     try {
-        const response = await axios.get<TickerData[]>(`/data/${ticker}_1d.json`) // Fetch the JSON file
+        const response = await axios.get<TickerData[]>(`/data/prices/daily/${ticker}_1d.json`) // Fetch the JSON file
         return response.data // Return sorted data
     } catch (error) {
         console.error('Error fetching ticker data:', error)

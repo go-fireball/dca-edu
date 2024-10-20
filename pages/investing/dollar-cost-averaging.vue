@@ -2,7 +2,7 @@
   <PageLayout title="Dollar-Cost Averaging (DCA)"
               prev-link="/investing/mutual-funds-and-etfs"
               home-link="/investing/intro"
-              next-link=""
+              next-link="/investing/options-for-risk-reduction"
   >
     <template #content>
       <h2>What is Dollar-Cost Averaging?</h2>

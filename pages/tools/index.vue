@@ -9,6 +9,12 @@
       <h2>
         <router-link :to="{ path: '/tools/compare-stocks' }">Compare Stocks</router-link>
       </h2>
+      <p>
+        The Compare Stocks tool allows investors to easily analyze and compare the performance of up to five different
+        stocks side by side. By providing key metrics such as price movements, volume, and performance over various time
+        frames, this tool helps users make informed decisions on which stocks to invest in. It's especially useful for
+        comparing tech stocks, like those in the NASDAQ, to see how they perform against each other.
+      </p>
 
       <h2>
         <router-link :to="{ path: '/tools/buy-write-calculator' }">Buy Write Options Calculator</router-link>
@@ -40,17 +46,16 @@
 import PageLayout from '@/components/PageLayout.vue';
 
 useHead({
-  title: 'Tools for Investing - Buy Write Options Calculator',
+  title: 'Tools for Investing - Compare Stocks & Buy Write Options Calculator',
   meta: [
     {
       name: 'description',
-      content: 'Explore the Buy Write Options Calculator to assess the potential returns from a buy write (covered call) strategy. Analyze key metrics like premium earned, profit, and annualized ROI to make informed investment decisions.'
+      content: 'Discover powerful tools to enhance your investment strategies. Use the Compare Stocks tool to analyze key metrics across multiple stocks, and the Buy Write Options Calculator to evaluate potential returns from a covered call strategy. Make informed decisions with insights on premium earned, profit, and annualized ROI.'
     },
     {
       name: 'keywords',
-      content: 'investing tools, buy write options calculator, covered call strategy, premium earned, annualized ROI, stock options, investment strategies'
+      content: 'investing tools, compare stocks, buy write options calculator, covered call strategy, stock comparison, premium earned, annualized ROI, stock options, investment strategies, NASDAQ tech stocks'
     }
   ]
 });
-
 </script>

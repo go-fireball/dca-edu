@@ -24,117 +24,125 @@
         </v-col>
       </v-row>
     </div>
-    <div v-if="selectedTickersInfo.some(info => info)" class="comparison-container">
+    <div  class="comparison-container">
       <v-row>
         <v-col cols="2" class="metric-col"><h4>Market Cap</h4></v-col>
-        <v-col v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
+        <v-col v-if="selectedTickersInfo.some(info => info)" v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
           <div v-if="tickerInfo">{{ tickerInfo.market_cap.toFixed(2) }} M</div>
         </v-col>
       </v-row>
     </div>
-    <div v-if="selectedTickersInfo.some(info => info)" class="comparison-container">
+    <div  class="comparison-container">
       <v-row>
         <v-col cols="2" class="metric-col"><h4>PE Ratio</h4></v-col>
-        <v-col v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
+        <v-col v-if="selectedTickersInfo.some(info => info)" v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
           <div v-if="tickerInfo">{{ tickerInfo.pe_ratio.toFixed(2) }}</div>
         </v-col>
       </v-row>
     </div>
 
-    <div v-if="selectedTickersInfo.some(info => info)" class="comparison-container">
+    <div class="comparison-container">
       <v-row>
         <v-col cols="2" class="metric-col"><h4>ROE</h4></v-col>
-        <v-col v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
+        <v-col  v-if="selectedTickersInfo.some(info => info)" v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
           <div v-if="tickerInfo">{{ (tickerInfo.roe * 100).toFixed(2) }} %</div>
         </v-col>
       </v-row>
     </div>
 
-    <div v-if="selectedTickersInfo.some(info => info)" class="comparison-container">
+    <div  class="comparison-container">
       <v-row>
         <v-col cols="2" class="metric-col"><h4>Debt to Equity</h4></v-col>
-        <v-col v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
+        <v-col v-if="selectedTickersInfo.some(info => info)" v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
           <div v-if="tickerInfo">{{ tickerInfo.debt_to_equity }}</div>
         </v-col>
       </v-row>
     </div>
 
-    <div v-if="selectedTickersInfo.some(info => info)" class="comparison-container">
+    <div class="comparison-container">
       <v-row>
         <v-col cols="2" class="metric-col"><h4>Current Ratio</h4></v-col>
-        <v-col v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
+        <v-col v-if="selectedTickersInfo.some(info => info)" v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
           <div v-if="tickerInfo">{{ tickerInfo.current_ratio.toFixed(2) }}</div>
         </v-col>
       </v-row>
     </div>
 
-    <div v-if="selectedTickersInfo.some(info => info)" class="comparison-container">
+    <div class="comparison-container">
       <v-row>
         <v-col cols="2" class="metric-col"><h4>Operating Margin</h4></v-col>
-        <v-col v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
+        <v-col v-if="selectedTickersInfo.some(info => info)"
+               v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
           <div v-if="tickerInfo">{{ (tickerInfo.operating_margin * 100).toFixed(2) }} %</div>
         </v-col>
       </v-row>
     </div>
 
-    <div v-if="selectedTickersInfo.some(info => info)" class="comparison-container">
+    <div  class="comparison-container">
       <v-row>
         <v-col cols="2" class="metric-col"><h4>Free Cash Flow</h4></v-col>
-        <v-col v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
+        <v-col v-if="selectedTickersInfo.some(info => info)"
+               v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
           <div v-if="tickerInfo">{{ currencyService.formatLargeNumber(tickerInfo.free_cash_flow) }}</div>
         </v-col>
       </v-row>
     </div>
 
-    <div v-if="selectedTickersInfo.some(info => info)" class="comparison-container">
+    <div class="comparison-container">
       <v-row>
         <v-col cols="2" class="metric-col"><h4>Trailing PEG Ratio</h4></v-col>
-        <v-col v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
+        <v-col v-if="selectedTickersInfo.some(info => info)"
+               v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
           <div v-if="tickerInfo">{{ tickerInfo.trailing_peg_ratio }}</div>
         </v-col>
       </v-row>
     </div>
 
-    <div v-if="selectedTickersInfo.some(info => info)" class="comparison-container">
+    <div  class="comparison-container">
       <v-row>
         <v-col cols="2" class="metric-col"><h4>Earnings Growth</h4></v-col>
-        <v-col v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
+        <v-col v-if="selectedTickersInfo.some(info => info)"
+               v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
           <div v-if="tickerInfo">{{ (tickerInfo.earning_growth * 100).toFixed(2) }} %</div>
         </v-col>
       </v-row>
     </div>
 
-    <div v-if="selectedTickersInfo.some(info => info)" class="comparison-container">
+    <div  class="comparison-container">
       <v-row>
         <v-col cols="2" class="metric-col"><h4>Revenue Growth</h4></v-col>
-        <v-col v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
+        <v-col v-if="selectedTickersInfo.some(info => info)"
+               v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
           <div v-if="tickerInfo">{{ (tickerInfo.revenue_growth * 100).toFixed(2) }} %</div>
         </v-col>
       </v-row>
     </div>
 
-    <div v-if="selectedTickersInfo.some(info => info)" class="comparison-container">
+    <div  class="comparison-container">
       <v-row>
         <v-col cols="2" class="metric-col"><h4>EBITDA Margin</h4></v-col>
-        <v-col v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
+        <v-col v-if="selectedTickersInfo.some(info => info)"
+               v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
           <div v-if="tickerInfo">{{ (tickerInfo.ebitda_margin * 100).toFixed(2) }} %</div>
         </v-col>
       </v-row>
     </div>
 
-    <div v-if="selectedTickersInfo.some(info => info)" class="comparison-container">
+    <div  class="comparison-container">
       <v-row>
         <v-col cols="2" class="metric-col"><h4>Price to Book</h4></v-col>
-        <v-col v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
+        <v-col v-if="selectedTickersInfo.some(info => info)"
+               v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
           <div v-if="tickerInfo">{{ tickerInfo.price_to_book.toFixed(2) }}</div>
         </v-col>
       </v-row>
     </div>
 
-    <div v-if="selectedTickersInfo.some(info => info)" class="comparison-container">
+    <div  class="comparison-container">
       <v-row>
         <v-col cols="2" class="metric-col"><h4>Institutional Holdings</h4></v-col>
-        <v-col v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
+        <v-col v-if="selectedTickersInfo.some(info => info)"
+               v-for="(tickerInfo, index) in selectedTickersInfo" :key="index" cols="2" class="stock-info-col">
           <div v-if="tickerInfo">{{ (tickerInfo.held_percent_institution * 100).toFixed(2) }} %</div>
         </v-col>
       </v-row>
@@ -149,10 +157,10 @@ import type { TickerItem, TickerInfo } from "~/services";
 import tickerService from "~/services/tickerService";
 import currencyService from "~/services/currencyService"
 
-const selectedTickers = ref<(TickerItem | null)[]>(Array(4).fill(null));
+const selectedTickers = ref<(TickerItem | null)[]>(Array(5).fill(null));
 
 // Array to hold detailed information about the selected stocks
-const selectedTickersInfo = ref<(TickerInfo | null)[]>(Array(4).fill(null));
+const selectedTickersInfo = ref<(TickerInfo | null)[]>(Array(5).fill(null));
 
 // Array to hold the available ticker symbols
 const tickerSymbols = ref<TickerItem[]>([]);
@@ -194,6 +202,20 @@ watch(
 // Load the ticker symbols when the component mounts
 onMounted(() => {
   loadTickerSymbols();
+});
+
+useHead({
+  title: 'Stock Comparison - Analyze and Compare Key Financial Metrics',
+  meta: [
+    {
+      name: 'description',
+      content: 'Compare key financial metrics such as Market Cap, PE Ratio, ROE, Debt to Equity, Operating Margin, and more for selected stocks. Make informed investment decisions by analyzing the strengths and weaknesses of multiple companies side by side.'
+    },
+    {
+      name: 'keywords',
+      content: 'stock comparison, market cap, PE ratio, ROE, financial metrics, investment analysis, compare stocks, stock performance, operating margin, free cash flow, debt to equity, financial health'
+    }
+  ]
 });
 </script>
 

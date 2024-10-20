@@ -75,6 +75,12 @@ ul {
   padding-left: 0;
 }
 
+
+ol {
+  list-style-type: disc;
+  padding-left: 0;
+}
+
 li {
   margin-bottom: 10px;
 }
@@ -87,9 +93,5 @@ ul li a {
 
 ul li a:hover {
   text-decoration: underline;
-}
-
-ul li {
-  font-size: 1.2rem;
 }
 </style>

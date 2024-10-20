@@ -6,7 +6,15 @@ export default defineNuxtConfig({
         head: {
             meta: [
                 {charset: 'utf-8'},
-                {'http-equiv': 'content-language', 'content': 'en'}
+                {'http-equiv': 'content-language', 'content': 'en'},
+                {
+                    property: 'og:url',
+                    content: 'https://d29k9gyuvafwel.cloudfront.net' // Set your base URL here
+                },
+                {
+                    property: 'og:type',
+                    content: 'website'
+                },
             ],
             link: [
                 {

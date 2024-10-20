@@ -10,11 +10,14 @@
     </div>
     <hr/>
     <div>
-    <p><strong>Disclaimer:</strong> The information provided here is for educational and informational purposes only.
-      While we strive to ensure the accuracy and reliability of the data, we do not make any guarantees regarding its completeness or accuracy.
-      The analysis and metrics provided should not be considered as investment advice, and any actions taken based on this information are at your own risk.
-      We do not assume responsibility for any financial losses or other damages incurred from the use of this data. Please consult with a qualified financial advisor before making any investment decisions.
-    </p>
+      <p><strong>Disclaimer:</strong> The information provided here is for educational and informational purposes only.
+        While we strive to ensure the accuracy and reliability of the data, we do not make any guarantees regarding its
+        completeness or accuracy.
+        The analysis and metrics provided should not be considered as investment advice, and any actions taken based on
+        this information are at your own risk.
+        We do not assume responsibility for any financial losses or other damages incurred from the use of this data.
+        Please consult with a qualified financial advisor before making any investment decisions.
+      </p>
     </div>
   </div>
 </template>
@@ -45,6 +48,12 @@ useHead({
 .content-container h2 {
   color: #2c3e50;
   margin-top: 20px;
+}
+
+.content-container h3,
+.content-container h4 {
+  color: #2c3e50;
+  margin-top: 15px;
 }
 
 p {

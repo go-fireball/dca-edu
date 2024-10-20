@@ -11,21 +11,8 @@ export default defineNuxtConfig({
                     property: 'og:url',
                     content: 'https://d29k9gyuvafwel.cloudfront.net' // Set your base URL here
                 },
-                {
-                    property: 'og:type',
-                    content: 'website'
-                },
             ],
-            link: [
-                {
-                    rel: 'stylesheet',
-                    href: 'https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css'
-                },
-                {
-                    rel: 'stylesheet',
-                    href: 'https://cdn.jsdelivr.net/npm/vuetify@3.7.2/dist/vuetify.min.css'
-                }
-            ],
+            link: [],
             script: [
                 {
                     src: '/clarity.js', // This is the path to the public/clarity.js file
@@ -42,22 +29,47 @@ export default defineNuxtConfig({
             ]
         }
     },
-    css: [],
-    /**
-     * Include the following in css block if needed,
-     * if included you may remove the link section
-     * 'vuetify/styles',
-     * '@mdi/font/css/materialdesignicons.css',
-     */
+    css: [
+        'vuetify/styles',
+        '@mdi/font/css/materialdesignicons.css'
+    ],
     plugins: [
         // Ensure this runs on client side only
-        {src: '~/plugins/highcharts.client.ts', mode: 'client'}
+        {src: '~/plugins/highcharts.client.ts', mode: 'client'},
+        {src: '~/plugins/canonical.ts'}
     ],
 
     build: {
+        analyze: {
+            enabled: true,
+        },
+        terser: {
+            terserOptions: {
+                compress: {
+                    drop_console: true, // Remove console logs for production
+                },
+            },
+        },
+        splitChunks: {
+            layouts: true,
+            pages: true,
+            commons: true,
+        },
         transpile: ['vuetify'],
     },
-
+    optimization:{
+        keyedComposables: [
+            { name: 'useFetch', argumentLength: 3 },
+            { name: 'useLazyFetch', argumentLength: 3 },
+        ],
+        treeShake: {
+            composables: {
+                client: {
+                    '@nuxtjs/composables': ['useServerOnlyComposable'], // Ensure server-only code isn't in client bundle
+                },
+            },
+        }
+    },
     modules: ['@nuxtjs/sitemap'],
     site: {url: 'd29k9gyuvafwel.cloudfront.net'},
 })

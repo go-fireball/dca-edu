@@ -1,6 +1,7 @@
 // plugins/vuetify.ts
 import {createVuetify} from 'vuetify'
 import * as directives from 'vuetify/directives'
+import 'vuetify/styles';
 import {
     VApp,
     VAppBar,
@@ -19,7 +20,8 @@ import {
     VListItem,
     VBtn,
     VSelect,
-    VDataTable
+    VDataTable,
+    VFooter,
 
 } from 'vuetify/components';
 
@@ -51,6 +53,7 @@ export default defineNuxtPlugin(nuxtApp => {
             VBtn,
             VSelect,
             VDataTable,
+            VFooter
         },
         directives
     })

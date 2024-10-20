@@ -28,11 +28,32 @@
     <v-main>
       <NuxtPage/>
     </v-main>
+    <v-footer color="primary" dark>
+      <v-row justify="center" no-gutters>
+        <v-btn
+            v-for="link in links"
+            :key="link.name"
+            :to="link.to"
+            class="mx-2"
+            color="white"
+            variant="text"
+        >
+          {{ link.label }}
+        </v-btn>
+      </v-row>
+    </v-footer>
   </v-app>
 </template>
 
 <script setup lang="ts">
 import {ref} from 'vue'
-
+const links = [
+  { name: 'home', label: 'Home', to: '/' },
+  { name: 'stocks', label: 'Stocks', to: { name: 'stocks' } },
+  { name: 'charts', label: 'Charts', to: { name: 'stocks-ticker', params: { ticker: 'AAPL' } } },
+  { name: 'analysis', label: 'Stock Analysis', to: { name: 'analysis' } },
+  { name: 'tools', label: 'Tools', to: { name: 'tools' } },
+  { name: 'glossary', label: 'Glossary', to: { name: 'glossary' } }
+];
 const drawer = ref(false)
 </script>

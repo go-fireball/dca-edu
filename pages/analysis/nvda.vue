@@ -165,14 +165,6 @@ useHead({
       property: 'og:description',
       content: 'Explore NVIDIA’s market performance, financial health, and growth prospects in the tech sector.'
     },
-    {
-      property: 'og:type',
-      content: 'website'
-    },
-    {
-      property: 'og:url',
-      content: 'https://d29k9gyuvafwel.cloudfront.net/analysis/nvda'
-    }
   ]
 });
 </script>

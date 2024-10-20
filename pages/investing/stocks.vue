@@ -29,6 +29,8 @@
         stock price could go down, and you could lose money.
       </p>
 
+      <iframe width="650" height="365" src="https://www.youtube.com/embed/2fLd4VQHKNg?si=yO3BgHiDidKFaPSf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
       <h2>How to Choose Long-Term Stocks</h2>
       <p>
         Choosing good stocks to invest in for the long term is like picking a strong, healthy tree to

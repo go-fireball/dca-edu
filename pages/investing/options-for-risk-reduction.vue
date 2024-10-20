@@ -36,8 +36,9 @@
 
       <p>Options might sound tricky at first, but they become easier once you understand how they can be used to protect
         your investments or earn additional income.
-
       </p>
+
+      <iframe width="650" height="365" src="https://www.youtube.com/embed/XV9avMhNL2Y?si=-gzRU2aoWq-DGoOC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
       <h2>Selling Covered Calls to Enhance Income</h2>
       <p>One popular way to use options is by selling covered calls. This is a strategy where you own a stock and sell a
